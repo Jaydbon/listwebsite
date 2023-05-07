@@ -6,6 +6,8 @@ function addweekly() {
         const newcheck = document.createElement('input');
         newcheck.setAttribute("type", "checkbox");
         newcheck.setAttribute("class", "checkntask");
+        newcheck.setAttribute("onclick", "check()");
+        newcheck.setAttribute("id", "checkbox");
 
         var input = document.getElementById('input').value;
         const newtask = document.createElement('p');
@@ -21,4 +23,10 @@ function addweekly() {
 
 
     document.getElementById("addtskbtn").appendChild(groupinp);
+}
+
+
+function check() {
+    console.log("yep")
+    document.getElementById("checkbox").checked = false;
 }
