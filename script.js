@@ -5,8 +5,12 @@ function addweekly() {
         var inp = document.createElement('input');
         inp.setAttribute('type', 'checkbox');
         inp.setAttribute('onclick', 'removeItem(this)');
+
+            var text = document.createElement('p');
+            text.appendChild(task)
+
         listItem.appendChild(inp)
-        listItem.appendChild(task)
+        listItem.appendChild(text)
     document.getElementById("addtskbtn").appendChild(listItem);
 
 

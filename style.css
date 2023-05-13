@@ -74,9 +74,14 @@ main .left-side h2{
 
 
 
-.checknbox p{
+#addtskbtn p{
     float: right;
 }
+
+#addtskbtn{
+    list-style-type: none;
+}
+
 
 
 
