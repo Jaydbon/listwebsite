@@ -1,32 +1,19 @@
 function addweekly() {
-    var groupinp = document.createElement('div');
-    groupinp.setAttribute("class", "checknbox");
-
-
-        const newcheck = document.createElement('input');
-        newcheck.setAttribute("type", "checkbox");
-        newcheck.setAttribute("class", "checkntask");
-        newcheck.setAttribute("onclick", "check()");
-        newcheck.setAttribute("id", "checkbox");
-
-        var input = document.getElementById('input').value;
-        const newtask = document.createElement('p');
-        const task = document.createTextNode(input);
-        newtask.appendChild(task);
-        newtask.setAttribute("class", "checkntask");
+    var input = document.getElementById('input').value;
+    const task = document.createTextNode(input);
+    var listItem = document.createElement('li');
+        var inp = document.createElement('input');
+        inp.setAttribute('type', 'checkbox');
+        inp.setAttribute('onclick', 'removeItem(this)');
+        listItem.appendChild(inp)
+        listItem.appendChild(task)
+    document.getElementById("addtskbtn").appendChild(listItem);
 
 
 
-
-    groupinp.appendChild(newcheck)
-    groupinp.appendChild(newtask)
-
-
-    document.getElementById("addtskbtn").appendChild(groupinp);
 }
 
-
-function check() {
-    console.log("yep")
-    document.getElementById("checkbox").checked = false;
+function removeItem(checkbox) {
+    var listItem = checkbox.parentNode;
+    listItem.parentNode.removeChild(listItem);
 }
